@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body { @apply bg-fn-black font-sans text-white antialiased; overflow-x: hidden; }
+section[id] { scroll-margin-top: 72px; }
+:focus-visible { outline: 2px solid #39ff14; outline-offset: 3px; }
+
+@layer components {
+  .btn-primary { @apply inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full bg-fn-neon px-7 py-3 text-sm font-bold uppercase tracking-wide text-fn-black shadow-neon transition duration-300 hover:scale-105 hover:shadow-neonlg active:scale-95; }
+  .btn-ghost { @apply inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full border border-fn-neon/60 px-7 py-3 text-sm font-bold uppercase tracking-wide text-white transition duration-300 hover:bg-fn-neon/10 hover:shadow-neon active:scale-95; }
+  .glow-card { @apply relative rounded-2xl border border-fn-neon/25 bg-fn-deep/60 backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-fn-neon/70 hover:shadow-neon; }
+  .field-input { @apply min-h-[48px] w-full rounded-xl border border-fn-neon/25 bg-fn-black/70 px-4 py-3 text-base text-white placeholder:text-white/40 transition duration-200 focus:border-fn-neon focus:shadow-neon focus:outline-none; }
+  .field-input[aria-invalid='true'] { @apply border-red-400/80; }
+  .field-input.is-valid { @apply border-fn-emerald/70; }
+  .section-title { @apply font-display text-4xl font-extrabold uppercase leading-[1.05] sm:text-5xl lg:text-6xl; }
+}
+
+@keyframes flow { to { stroke-dashoffset: -400; } }
+@keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
+@keyframes twinkle { 0%,100% { opacity: .15; } 50% { opacity: .9; } }
+@keyframes pulse-ring { 0% { transform: scale(1); opacity: .6; } 100% { transform: scale(1.7); opacity: 0; } }
+.fiber-line { stroke-dasharray: 60 340; animation: flow 6s linear infinite; }
+.float-slow { animation: float 7s ease-in-out infinite; }
+.twinkle { animation: twinkle 4s ease-in-out infinite; }
+.wa-ring { animation: pulse-ring 2.4s ease-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .fiber-line, .float-slow, .twinkle, .wa-ring { animation: none; }
+}
