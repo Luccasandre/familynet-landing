@@ -11,7 +11,7 @@ export default function Coverage() {
         <Reveal className="mx-auto max-w-3xl text-center">
           <h2 className="section-title">Onde a FamilyNet está presente?</h2>
           <p className="mt-4 text-lg text-white/75">
-            Levamos conexão de qualidade para diversos bairros e localidades. Confira se sua região já conta com a cobertura da FamilyNet.
+            Levamos internet de qualidade para diversos bairros e localidades. Confira se sua região já conta com a cobertura da FamilyNet.
           </p>
         </Reveal>
 
@@ -35,10 +35,10 @@ export default function Coverage() {
 
         <Reveal className="relative mt-12 overflow-hidden rounded-2xl border border-fn-neon/50 bg-gradient-to-br from-fn-emerald/25 via-fn-deep/80 to-fn-black p-6 text-center shadow-neon sm:p-10">
           <h3 className="font-display text-3xl font-extrabold uppercase leading-tight sm:text-4xl">
-            Seu bairro está na lista? Entre em contato e consulte nossa cobertura!
+            Seu bairro está na lista?
           </h3>
           <p className="mx-auto mt-4 max-w-2xl text-white/80">
-            Para mais informações sobre disponibilidade e instalação, entre em contato com nossa equipe de atendimento.
+            Atendemos diversas regiões. Consulte nossa equipe! Entre em contato e consulte a disponibilidade para instalação.
           </p>
           <div className="mt-7 flex flex-col items-stretch gap-3 sm:flex-row sm:justify-center">
             <a href={whatsappLink(MESSAGES.coverage)} target="_blank" rel="noopener noreferrer" className="btn-primary">

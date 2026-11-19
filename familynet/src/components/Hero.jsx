@@ -19,11 +19,11 @@ export default function Hero() {
             Navegue, trabalhe, estude, jogue e aproveite seus conteúdos favoritos com a qualidade da internet fibra óptica da FamilyNet.
           </motion.p>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.45 }} className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center lg:justify-start">
-            <a href={whatsappLink(MESSAGES.general)} target="_blank" rel="noopener noreferrer" className="btn-primary"><WhatsAppIcon /> Quero contratar</a>
-            <a href="#planos" className="btn-ghost">Conhecer planos <ArrowRight className="h-4 w-4" /></a>
+            <a href="#planos" className="btn-primary">Conheça nossos planos <ArrowRight className="h-4 w-4" aria-hidden="true" /></a>
+            <a href="#areas" className="btn-ghost"><MapPin className="h-4 w-4" aria-hidden="true" /> Consulte nossa cobertura</a>
           </motion.div>
-          <motion.a href="#areas" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.7, delay: 0.6 }} className="mt-5 inline-flex min-h-[44px] items-center gap-2 text-sm font-semibold text-fn-neon underline-offset-4 hover:underline">
-            <MapPin className="h-4 w-4" aria-hidden="true" /> Consulte nossa cobertura
+          <motion.a href={whatsappLink(MESSAGES.general)} target="_blank" rel="noopener noreferrer" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.7, delay: 0.6 }} className="mt-5 inline-flex min-h-[44px] items-center gap-2 text-sm font-semibold text-fn-neon underline-offset-4 hover:underline">
+            <WhatsAppIcon className="h-4 w-4" /> Quero contratar pelo WhatsApp
           </motion.a>
         </div>
         <motion.div initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.9, delay: 0.3 }} className="relative mx-auto w-full max-w-sm">

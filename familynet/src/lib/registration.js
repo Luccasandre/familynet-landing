@@ -34,6 +34,8 @@ export function validateField(name, value, form = {}) {
       if (!onlyDigits(value)) return 'Informe seu número de WhatsApp.'
       if (!isValidWhatsApp(value)) return 'Digite um celular válido com DDD. Ex.: (81) 99999-9999.'
       return ''
+    case 'tipo':
+      return v === 'residencial' || v === 'empresarial' ? '' : 'Escolha o tipo de contratação.'
     case 'bairro':
       return v ? '' : 'Selecione seu bairro ou localidade.'
     case 'bairroOutro':
@@ -54,7 +56,7 @@ export function validateField(name, value, form = {}) {
   }
 }
 
-export const FIELDS = ['nome', 'whatsapp', 'bairro', 'bairroOutro', 'rua', 'numero', 'referencia', 'plano', 'consentimento']
+export const FIELDS = ['nome', 'whatsapp', 'tipo', 'bairro', 'bairroOutro', 'rua', 'numero', 'referencia', 'plano', 'consentimento']
 
 export function validateAll(form) {
   const errors = {}

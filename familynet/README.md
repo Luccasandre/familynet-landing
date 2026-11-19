@@ -41,3 +41,8 @@ Obs.: no `index.html`, a imagem Open Graph usa caminho relativo (`/og-image.jpg`
 - Bairros atendidos: edite `src/lib/areas.js` (alimenta a seção "Áreas atendidas" e o seletor do cadastro).
 - Cadastro: `src/components/CustomerRegistration.jsx`. Não há banco de dados: o formulário abre o WhatsApp da FamilyNet (número em `src/lib/whatsapp.js`) com a mensagem pronta, e o cliente confirma o envio no aplicativo.
 - Os planos do seletor vêm de `PLANS` em `src/components/Plans.jsx` (preços em um só lugar).
+
+## Planos empresariais e localização
+- Planos empresariais e IP fixo: `src/components/BusinessPlans.jsx` (preços em `BUSINESS_PLANS`; preço do IP fixo em `IP_FIXO_PRICE`, em `src/lib/whatsapp.js`).
+- Localização: `src/components/Location.jsx` (botão "Como chegar" usa a pesquisa do endereço no Google Maps).
+- Imagens em `src/assets/`: `business-banner.webp` e `familynet-location.webp`.

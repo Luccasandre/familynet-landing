@@ -1,4 +1,4 @@
-import { Wifi, Star, ArrowRight } from 'lucide-react'
+import { Wifi, Star, ArrowRight, Home } from 'lucide-react'
 import { Reveal, WhatsAppIcon } from './ui'
 import { MESSAGES, whatsappLink } from '../lib/whatsapp'
 
@@ -33,14 +33,15 @@ export default function Plans() {
     <section id="planos" className="relative bg-fn-black px-4 py-20 sm:py-28">
       <div className="mx-auto max-w-6xl">
         <Reveal className="mx-auto max-w-3xl text-center">
-          <h2 className="section-title">Escolha a internet ideal para sua família.</h2>
+          <span className="inline-flex items-center gap-2 rounded-full border border-fn-neon/40 px-4 py-1.5 text-sm font-semibold text-fn-neon"><Home className="h-4 w-4" aria-hidden="true" /> Planos residenciais</span>
+          <h2 className="section-title mt-5">Escolha a internet ideal para sua família.</h2>
           <p className="mt-4 text-lg text-white/75">Mais velocidade para acompanhar tudo o que faz parte do seu dia.</p>
         </Reveal>
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {PLANS.map((p, i) => <PlanCard key={p.id} plan={p} index={i} />)}
         </div>
         <Reveal className="mt-12 text-center">
-          <p className="text-lg font-semibold">Gostou de um plano? Faça seu cadastro!</p>
+          <p className="text-lg font-semibold">Encontrou o plano ideal para sua família? Faça seu cadastro!</p>
           <a href="#cadastro" className="btn-ghost mt-4 w-full sm:w-auto">Quero me cadastrar <ArrowRight className="h-4 w-4" aria-hidden="true" /></a>
         </Reveal>
       </div>

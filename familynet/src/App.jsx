@@ -4,6 +4,8 @@ import Hero from './components/Hero'
 import Plans from './components/Plans'
 import Benefits from './components/Benefits'
 import IPTV from './components/IPTV'
+import BusinessPlans from './components/BusinessPlans'
+import Location from './components/Location'
 import Coverage from './components/Coverage'
 import CustomerRegistration from './components/CustomerRegistration'
 import Conversion from './components/Conversion'
@@ -18,12 +20,14 @@ export default function App() {
       <main>
         <Hero />
         <Plans />
+        <BusinessPlans />
         <Benefits />
         <IPTV />
         <Coverage />
         <CustomerRegistration />
-        <Conversion />
+        <Location />
         <Contact />
+        <Conversion />
       </main>
       <Footer />
       <WhatsAppButton />
